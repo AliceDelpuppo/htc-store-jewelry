@@ -128,6 +128,8 @@
     element.style {
         width: 140px;
     }
+
+    width: calc(100% - 200px);
 }
 
 :root {

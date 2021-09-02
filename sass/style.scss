@@ -25,7 +25,6 @@ body {
 
 .header {
     .container {
-        background-color: blue;
         .container-top-bar {
             .top-bar {
                 padding: 7px 0px;
@@ -176,6 +175,10 @@ body {
                     .content-image {
                         @include flex-center;
                         flex-direction: column;
+
+                        .image {
+                            display: flex;
+                        }
     
                         .sub-image {
                             margin-bottom: 20px;

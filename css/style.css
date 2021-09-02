@@ -34,7 +34,7 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-  background-color: blue;
+  background-color: #fff;
   width: 10px;
   border-radius: 6px;
 }
@@ -98,6 +98,9 @@ h1 {
   height: 0%;
 }
 
+.mySwiper-varieties-gemstones {
+  width: calc(100% - 200px);
+}
 .mySwiper-varieties-gemstones html,
 .mySwiper-varieties-gemstones body {
   position: relative;
@@ -173,9 +176,6 @@ body {
   text-transform: uppercase;
 }
 
-.header .container {
-  background-color: blue;
-}
 .header .container .container-top-bar .top-bar {
   padding: 7px 0px;
   width: 100%;
@@ -315,6 +315,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.main .container .container-releases .content-releases .content-releases-item .content-image .image {
+  display: flex;
 }
 .main .container .container-releases .content-releases .content-releases-item .content-image .sub-image {
   margin-bottom: 20px;
