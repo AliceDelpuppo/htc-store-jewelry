@@ -12,14 +12,20 @@ body {
 }
 
 .container {
+    width: 100vw;
     .container-center {
         @include flex-center;
         width: $max-width;
     }
 }
 
+.text-uppercase {
+    text-transform: uppercase;
+}
+
 .header {
     .container {
+        background-color: blue;
         .container-top-bar {
             .top-bar {
                 padding: 7px 0px;
@@ -68,6 +74,7 @@ body {
         }
 
         .container-header-benefits {
+            margin-bottom: 44px;
             background-color: $bg-color-dark-purple;
             ul.header-benefits-list {
                 @include flex-center;
@@ -93,11 +100,52 @@ body {
                                 font-weight: 300;
                                 color: $text-color-white;
                             }
-
-                            .text-uppercase {
-                                text-transform: uppercase;
-                            }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main {
+    .container {
+        // background-color: red;
+        background-color: $bg-color-primary-color;
+        .container-varieties-gemstones {
+            width: 100%;
+            .title-varieties-gemstone {
+                margin-bottom: 22px;
+                p {
+                    text-align: center;
+                    font-size: calculator-rem(24);
+                    font-weight: 300;
+                    color: $text-color-dark-gray;
+                    
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+            
+            .list-gemstones {
+                // border: 1px solid red;
+                @include flex-center;
+
+                .item-gemstone {
+                    @include flex-center;
+                    flex-direction: column;
+                    // border: 1px solid blue;
+                    margin: 0 19px 0 0;
+                    img {
+                        margin-bottom: 24px;
+                        width: 133px;
+                        height: 133px;
+                    }
+                    .text-types-gemstones {
+                        font-size: calculator-rem(14);
+                        font-weight: 400;
+                        color: $text-color-medium-purple;
                     }
                 }
             }

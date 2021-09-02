@@ -44,11 +44,6 @@ h1 {
   border-radius: 6px;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -97,12 +92,26 @@ h1 {
   background-color: #8D94BA;
 }
 
+.mySwiper-varieties-gemstones .swiper-slide img {
+  width: 133px;
+  height: auto;
+  width: 0%;
+  height: 0%;
+}
+
+.swiper-slide {
+  width: 0%;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  width: 100vw;
+}
 .container .container-center {
   display: flex;
   justify-content: center;
@@ -110,6 +119,13 @@ body {
   width: 1440px;
 }
 
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.header .container {
+  background-color: blue;
+}
 .header .container .container-top-bar .top-bar {
   padding: 7px 0px;
   width: 100%;
@@ -150,6 +166,7 @@ body {
   color: #ffffff;
 }
 .header .container .container-header-benefits {
+  margin-bottom: 44px;
   background-color: #614B65;
 }
 .header .container .container-header-benefits ul.header-benefits-list {
@@ -179,8 +196,46 @@ body {
   font-size: 1rem;
   color: #ffffff;
 }
-.header .container .container-header-benefits ul.header-benefits-list li a .text-header-benefits .text-uppercase {
-  text-transform: uppercase;
+
+.main .container {
+  background-color: #ffffff;
+}
+.main .container .container-varieties-gemstones {
+  width: 100%;
+}
+.main .container .container-varieties-gemstones .title-varieties-gemstone {
+  margin-bottom: 22px;
+}
+.main .container .container-varieties-gemstones .title-varieties-gemstone p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #5C5762;
+}
+.main .container .container-varieties-gemstones .title-varieties-gemstone p strong {
+  font-weight: 700;
+}
+.main .container .container-varieties-gemstones .list-gemstones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .container-varieties-gemstones .list-gemstones .item-gemstone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 19px 0 0;
+}
+.main .container .container-varieties-gemstones .list-gemstones .item-gemstone img {
+  margin-bottom: 24px;
+  width: 133px;
+  height: 133px;
+}
+.main .container .container-varieties-gemstones .list-gemstones .item-gemstone .text-types-gemstones {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #9A7AA0;
 }
 
 /*# sourceMappingURL=style.css.map */
