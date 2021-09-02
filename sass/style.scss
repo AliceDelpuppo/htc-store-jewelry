@@ -1,0 +1,108 @@
+@import "../swiperjs/swiper.scss";
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ovo&display=swap");
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    .container-center {
+        @include flex-center;
+        width: $max-width;
+    }
+}
+
+.header {
+    .container {
+        .container-top-bar {
+            .top-bar {
+                padding: 7px 0px;
+                width: 100%;
+
+                text-align: center;
+                font-size: calculator-rem(12);
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $text-color-white;
+                background-color: $bg-color-dark-purple;
+            }
+        }
+
+        .container-top-menu {
+            background-color: $bg-color-medium-purple;
+            nav.top-menu {
+                padding: 22px 0;
+                ul.header-mega-menu {
+                    @include flex-center;
+
+                    .mega-menu-padding {
+                        padding: 0 15px;
+                        cursor: pointer;
+                    }
+
+                    .mega-menu-item {
+                        color: $text-color-white;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: calculator-rem(14);
+                    }
+
+                    .title {
+                        .h1 {
+                            padding: 0 15px;
+                            font-family: "Ovo", sans-serif;
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            font-size: calculator-rem(48);
+                            color: $text-color-white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-header-benefits {
+            background-color: $bg-color-dark-purple;
+            ul.header-benefits-list {
+                @include flex-center;
+                margin: 20px 0;
+
+                li {
+                    a {
+                        @include flex-center;
+
+                        .image-header-benefits-margin {
+                            margin-right: 15px;
+                        }
+                        .text-header-benefits {
+                            margin-right: 50px;
+                            p {
+                                &:first-child {
+                                    font-weight: 600;
+                                    font-size: calculator-rem(16);
+                                    color: $text-color-white;
+                                }
+
+                                font-size: calculator-rem(12);
+                                font-weight: 300;
+                                color: $text-color-white;
+                            }
+
+                            .text-uppercase {
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
