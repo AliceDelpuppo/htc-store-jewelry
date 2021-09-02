@@ -120,13 +120,13 @@ body {
                     font-size: calculator-rem(24);
                     font-weight: 300;
                     color: $text-color-dark-gray;
-                    
+
                     strong {
                         font-weight: 700;
                     }
                 }
             }
-            
+
             .list-gemstones {
                 @include flex-center;
 
@@ -143,6 +143,105 @@ body {
                         font-size: calculator-rem(14);
                         font-weight: 400;
                         color: $text-color-medium-purple;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        .container-releases {
+            .title-releases {
+                margin: 75px 0 20px 0;
+                p {
+                    text-align: center;
+                    font-size: calculator-rem(24);
+                    color: $text-color-dark-gray;
+                    font-weight: 400;
+                    strong {
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .content-releases {
+                @include flex-center;
+                align-items: initial;
+                
+                .content-releases-item {
+                    margin-right: 20px;
+                    max-width: 240px;
+                    max-height: 520px;
+
+                    .content-image {
+                        @include flex-center;
+                        flex-direction: column;
+    
+                        .sub-image {
+                            margin-bottom: 20px;
+                            @include flex-center;
+                            .news {
+                                @include flex-center;
+                                width: 120px;
+                                height: 28px;
+                                background-color: $bg-b-light-purple;
+                                color: #fff;
+                                font-size: calculator-rem(12);
+                                font-weight: 800;
+                            }
+    
+                            .free-shipping {
+                                @include flex-center;
+                                width: 120px;
+                                height: 28px;
+                                background-color: $bg-b-dark-purple;
+                                color: #fff;
+                                font-size: calculator-rem(12);
+                                font-weight: 800;
+                            }
+                        }
+                    }
+    
+                    .name-item {
+                        margin-bottom: 46px;
+                        text-align: center;
+                        .primary-name {
+                            font-size: calculator-rem(18);
+                            font-weight: 400;
+                            color: $text-color-medium-purple;                        
+                        }
+                    }
+    
+                    .secundary-name {
+                        text-align: center;
+                        font-size: calculator-rem(14);
+                        font-weight: 400;
+                        color: $text-color-medium-purple;  
+                    }
+    
+                    .value-item {
+                        .value {
+                            text-align: center;
+                            font-size: calculator-rem(24);
+                            font-weight: 700;
+                            color: $text-color-light-purple;
+                        }
+    
+                        .secundary-name {
+                            margin-bottom: 24px;
+                        }
+                    }
+    
+                    .button-buy {
+                        @include flex-center;
+                        background-color: $bg-b-green;
+                        width: 240px;
+                        height: 48px;
+                        border-radius: 50px;
+    
+                        color: #fff;
+                        font-size: calculator-rem(18px);
+                        font-weight: 700;
                     }
                 }
             }
