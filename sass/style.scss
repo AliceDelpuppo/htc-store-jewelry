@@ -1,9 +1,9 @@
-@import "../swiperjs/swiper.scss";
-@import "_reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ovo&display=swap");
+
 @import "_variables.scss";
 @import "_mixins.scss";
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ovo&display=swap");
+@import "_reset.scss";
+@import "_swiper.scss";
 
 body {
     width: 100vw;
@@ -100,8 +100,6 @@ body {
                         }
                     }
                 }
-
-                
             }
         }
     }
