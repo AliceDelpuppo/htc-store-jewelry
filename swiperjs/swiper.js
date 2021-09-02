@@ -1,26 +1,22 @@
 var swiper = new Swiper(".mySwiper-main-banner", {
     cssMode: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
+        el: ".swiper-pagination",
     },
     mousewheel: true,
     keyboard: true,
-  });
+});
 
-//   var swiper = new Swiper(".mySwiper-varieties-gemstones", {
-//     cssMode: true,
-//     // navigation: {
-//     //   nextEl: ".swiper-button-next",
-//     //   prevEl: ".swiper-button-prev",
-//     // },
-//     pagination: {
-//       el: ".swiper-pagination",
-//     },
-//     mousewheel: true,
-//     keyboard: true,
-//   });
+var swiper = new Swiper(".mySwiper-varieties-gemstones", {
+    slidesPerView: 7,
+    spaceBetween: 2,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 

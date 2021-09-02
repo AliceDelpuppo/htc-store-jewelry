@@ -110,7 +110,6 @@ body {
 
 .main {
     .container {
-        // background-color: red;
         background-color: $bg-color-primary-color;
         .container-varieties-gemstones {
             width: 100%;
@@ -129,13 +128,11 @@ body {
             }
             
             .list-gemstones {
-                // border: 1px solid red;
                 @include flex-center;
 
                 .item-gemstone {
                     @include flex-center;
                     flex-direction: column;
-                    // border: 1px solid blue;
                     margin: 0 19px 0 0;
                     img {
                         margin-bottom: 24px;
