@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,57 +9,139 @@
 
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
     <script src="swiperjs/swiper.js" defer></script>
+
     <script src="js/script.js" defer></script>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body>
     <header class="header">
 
         <div class="container">
             <div class="container-center container-top-bar">
                 <div class="top-bar">
-                    <p>Em até <strong>6x sem juros</strong> | Entrega <strong>segura</strong> | <strong>5% de desconto</strong> para transferência</p>
+                    <p>Em até <strong>6x sem juros</strong> | Entrega <strong>segura</strong> | <strong>5% de
+                            desconto</strong> para transferência</p>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="container-center">
+            <div class="container-center container-top-menu">
                 <nav class="top-menu">
-                    <h1>HTC JOIAS</h1>
+                    <ul class="header-mega-menu">
+                        <li class="title">
+                            <a href="#" class="mega-menu-padding mega-menu-item">
+                                <h1 class="h1">HTC JOIAS</h1>
+                            </a>
+                        </li>
+
+                        <li class="mega-menu-padding mega-menu-item">Água marinha</li>
+
+                        <!-- Restante do menu -->
+
+                        <li class="button-search mega-menu-padding">
+                            <a href="#"><img src="image/loupe.svg" alt="lupa"></a>
+                        </li>
+
+                        <li class="button-user mega-menu-padding">
+                            <a href="#"><img src="image/user.svg" alt="usuário"></a>
+                        </li>
+
+                        <li class="shopping-bar mega-menu-padding">
+                            <a href="#"><img src="image/shopping-bag.svg" alt="sacola"></a>
+                        </li>
+
+                    </ul>
                 </nav>
 
-                <!-- Restante do menu -->
-
-                <div class="button-search">
-                    <a href="#"><img src="image/loupe.svg" alt="lupa"></a>
-                </div>
-
-                <div class="button-user">
-                    <a href="#"><img src="image/user.svg" alt="usuário"></a>
-                </div>
-
-                <div class="shopping-bar">
-                    <a href="#"><img src="image/shopping-bag.svg" alt="sacola"></a>
-                </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="container-center">
-                
+            <div class="container-center container-header-swiper">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="image/image-anel-header.svg" alt="anel"></div>
+
+                        <div class="swiper-slide"><img src="image/image-anel-header.svg" alt="anel"></div>
+
+                        <div class="swiper-slide"><img src="image/image-anel-header.svg" alt="anel"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
             </div>
         </div>
 
         <div class="container">
-            <div class="container-center">
-                
+            <div class="container-center container-header-">
+                <ul>
+                    <li class="-safe-buy">
+                        <a href="#">
+                            <div class="image-safe-buy">
+                                <img src="" alt="cadeado">
+                            </div>
+                            <div class="text-header- text-safe-buy">
+                                <p class="text-uppercase">Compra 100% segura</p>
+                                <p>Seus dados ficam protegidos</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="-credit-card">
+                        <a href="#">
+                            <div class="image-credit-card">
+                                <img src="" alt="cartão">
+                            </div>
+                            <div class="text-header- text-credit-card">
+                                <p class="text-uppercase">Até 3x sem juros</p>
+                                <p>Pague com o cartão de crédito</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="-same-day">
+                        <a href="#">
+                            <div class="image-same-day">
+                                <img src="" alt="caminhão">
+                            </div>
+                            <div class="text-header- ">
+                                <p class="text-uppercase">Receba no mesmo dia</p>
+                                <p>Para região de São Paulo capital</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="certified-products">
+                        <a href="#">
+                            <div class="image-certified-products">
+                                <img src="" alt="medalha">
+                            </div>
+                            <div class="text-header- ">
+                                <p class="text-uppercase">Produtos certificados</p>
+                                <p>Certificação de autenticidade ENE2ESE</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
-        </div>
+        </div>        
     </header>
-    
+
+    <div class="container">
+        <div class="container-center">
+
+        </div>
+    </div>
 </body>
+
 </html>
