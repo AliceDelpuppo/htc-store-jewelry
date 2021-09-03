@@ -6,22 +6,6 @@
 
     .swiper-slide {
         text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
     }
 
     .swiper-slide img {
@@ -29,40 +13,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    :root {
-        --swiper-theme-color: #542d84;
-        --swiper-navigation-size: 30px;
-        --swiper-pagination-color: #8d94ba;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        background-color: rgba(141, 148, 186, 0.3);
-        width: 58px;
-        height: 58px;
-        border-radius: 50%;
-        margin: 0 134px;
-    }
-
-    .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #8d94ba;
-    }
-
-    .mySwiper-varieties-gemstones {
-        .swiper-slide {
-            img {
-                width: 133px;
-                height: auto;
-                width: 0%;
-                height: 0%;
-            }
-        }
-    }
+    }    
 }
 
 // --------------------------
@@ -74,83 +25,89 @@
         height: 100%;
     }
 
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-    }
-
-    // .swiper {
-    //     width: 100%;
-    //     height: 100%;
-    // }
-
     .swiper-slide {
         text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-        height: 300px;
+        height: 250px;
 
         .item-gemstone {
-            // @include flex-center;
-            // flex-direction: column;
-            // margin: 0 19px 0 0;
-
-            // img {
-            //     margin-bottom: 24px;
-            //     width: 133px;
-            //     height: 133px;
-            // }
+            img {
+                margin-bottom: 24px;
+                display: flex;
+                width: 133px;
+                height: 133px;
+                object-fit: cover;
+            }
 
             .text-types-gemstones {
                 font-size: calculator-rem(14);
                 font-weight: 400;
                 color: #9a7aa0;
             }
-        }
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 133px;
-        height: 133px;
-        object-fit: cover;
-    }
-
-    .swiper-pagination-bullet {
-        width: 20px;
-        height: 20px;
+        }        
     }
 
     .swiper-pagination {
-        top: 280px;
+        top: 220px;
     }
 
-    width: calc(100% - 200px);
+    width: calc(100% - 400px);
 }
+
+
+//  ----------------------------------
+
+.mySwiper-content-releases {
+    position: static;
+    width: calc(100% - 426px);
+    .swiper-slide {
+        .content-image {
+            .image {
+                width: 100%;
+                height: 100%;
+                display: flex;
+            }
+        }
+    }
+
+    .swiper-button-next {
+        right: 120px;
+        margin: 0;
+    }
+    .swiper-button-prev {
+        left: 120px;
+        margin: 0;
+        
+    }
+
+    .swiper-pagination {
+        top: 680px;
+    }
+}
+
+//  ----------------------------------
 
 :root {
     --swiper-theme-color: #542d84;
     --swiper-navigation-size: 30px;
     --swiper-pagination-color: #8d94ba;
 }
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #8d94ba;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(141, 148, 186, 0.3);
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin: 0 134px;
+}
+
 
 // .swiper {
 //     width: 100%;

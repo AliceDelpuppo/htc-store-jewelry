@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul, ol, li {
   list-style: none;
 }
@@ -34,13 +38,13 @@ h1 {
 }
 
 ::-webkit-scrollbar {
-  background-color: gray;
+  background-color: #ffffff;
   width: 10px;
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: rgba(141, 148, 186, 0.5);
   border-radius: 6px;
 }
 
@@ -50,21 +54,6 @@ h1 {
 }
 .mySwiper-main-banner .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 .mySwiper-main-banner .swiper-slide img {
   display: block;
@@ -72,90 +61,76 @@ h1 {
   height: 100%;
   object-fit: cover;
 }
-.mySwiper-main-banner :root {
-  --swiper-theme-color: #542d84;
-  --swiper-navigation-size: 30px;
-  --swiper-pagination-color: #8d94ba;
-}
-.mySwiper-main-banner .swiper-button-next,
-.mySwiper-main-banner .swiper-button-prev {
-  background-color: rgba(141, 148, 186, 0.3);
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  margin: 0 134px;
-}
-.mySwiper-main-banner .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #8d94ba;
-}
-.mySwiper-main-banner .mySwiper-varieties-gemstones .swiper-slide img {
-  width: 133px;
-  height: auto;
-  width: 0%;
-  height: 0%;
-}
 
 .mySwiper-varieties-gemstones {
-  width: calc(100% - 200px);
+  width: calc(100% - 400px);
 }
 .mySwiper-varieties-gemstones html,
 .mySwiper-varieties-gemstones body {
   position: relative;
   height: 100%;
 }
-.mySwiper-varieties-gemstones body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
 .mySwiper-varieties-gemstones .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  height: 250px;
+}
+.mySwiper-varieties-gemstones .swiper-slide .item-gemstone img {
+  margin-bottom: 24px;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  height: 300px;
+  width: 133px;
+  height: 133px;
+  object-fit: cover;
 }
 .mySwiper-varieties-gemstones .swiper-slide .item-gemstone .text-types-gemstones {
   font-size: 0.875rem;
   font-weight: 400;
   color: #9a7aa0;
 }
-.mySwiper-varieties-gemstones .swiper-slide img {
-  display: block;
-  width: 133px;
-  height: 133px;
-  object-fit: cover;
-}
-.mySwiper-varieties-gemstones .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-}
 .mySwiper-varieties-gemstones .swiper-pagination {
-  top: 280px;
+  top: 220px;
+}
+
+.mySwiper-content-releases {
+  position: static;
+  width: calc(100% - 426px);
+}
+.mySwiper-content-releases .swiper-slide .content-image .image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.mySwiper-content-releases .swiper-button-next {
+  right: 120px;
+  margin: 0;
+}
+.mySwiper-content-releases .swiper-button-prev {
+  left: 120px;
+  margin: 0;
+}
+.mySwiper-content-releases .swiper-pagination {
+  top: 680px;
 }
 
 :root {
   --swiper-theme-color: #542d84;
   --swiper-navigation-size: 30px;
   --swiper-pagination-color: #8d94ba;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #8d94ba;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(141, 148, 186, 0.3);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin: 0 134px;
 }
 
 body {
@@ -267,6 +242,10 @@ body {
 .main .container .container-varieties-gemstones .title-varieties-gemstone p strong {
   font-weight: 700;
 }
+.main .container .container-releases {
+  position: relative;
+  width: 100%;
+}
 .main .container .container-releases .title-releases {
   margin: 75px 0 20px 0;
 }
@@ -281,26 +260,17 @@ body {
 }
 .main .container .container-releases .content-releases {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: initial;
 }
 .main .container .container-releases .content-releases .content-releases-item {
-  margin-right: 20px;
-  max-width: 240px;
+  width: 240px;
 }
 .main .container .container-releases .content-releases .content-releases-item .content-image {
   display: flex;
   flex-direction: column;
 }
-.main .container .container-releases .content-releases .content-releases-item .content-image .image {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
 .main .container .container-releases .content-releases .content-releases-item .content-image .image-selo {
   margin-bottom: 20px;
-  width: 100%;
+  width: 240px;
   height: 28px;
   display: flex;
 }
