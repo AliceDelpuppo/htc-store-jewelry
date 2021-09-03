@@ -11,6 +11,8 @@ var swiper = new Swiper(".mySwiper-main-banner", {
     keyboard: true,
 });
 
+
+
 var swiper = new Swiper(".mySwiper-varieties-gemstones", {
     slidesPerView: 7,
     spaceBetween: 2,

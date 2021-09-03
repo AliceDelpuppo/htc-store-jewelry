@@ -107,6 +107,24 @@
         -webkit-align-items: center;
         align-items: center;
         height: 300px;
+
+        .item-gemstone {
+            // @include flex-center;
+            // flex-direction: column;
+            // margin: 0 19px 0 0;
+
+            // img {
+            //     margin-bottom: 24px;
+            //     width: 133px;
+            //     height: 133px;
+            // }
+
+            .text-types-gemstones {
+                font-size: calculator-rem(14);
+                font-weight: 400;
+                color: #9a7aa0;
+            }
+        }
     }
 
     .swiper-slide img {
@@ -124,10 +142,6 @@
     .swiper-pagination {
         top: 280px;
     }
-    
-    element.style {
-        width: 140px;
-    }
 
     width: calc(100% - 200px);
 }
@@ -137,3 +151,30 @@
     --swiper-navigation-size: 30px;
     --swiper-pagination-color: #8d94ba;
 }
+
+// .swiper {
+//     width: 100%;
+//     display: flex;
+//     overflow-x: hidden;
+//     align-items: center;
+//     position: relative;
+//     .swiper-wrapper {
+//         display: flex;
+//     }
+// }
+
+// .swiper-button-next {
+//     width: 50px;
+//     height: 50px;
+//     background-color: red;
+//     position: absolute;
+//     right: 0;
+// }
+
+// .swiper-button-prev {
+//     width: 50px;
+//     height: 50px;
+//     background-color: red;
+//     position: absolute;
+
+// }

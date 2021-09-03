@@ -125,26 +125,6 @@ body {
                     }
                 }
             }
-
-            .list-gemstones {
-                @include flex-center;
-
-                .item-gemstone {
-                    @include flex-center;
-                    flex-direction: column;
-                    margin: 0 19px 0 0;
-                    img {
-                        margin-bottom: 24px;
-                        width: 133px;
-                        height: 133px;
-                    }
-                    .text-types-gemstones {
-                        font-size: calculator-rem(14);
-                        font-weight: 400;
-                        color: $text-color-medium-purple;
-                    }
-                }
-            }
         }
     }
 
