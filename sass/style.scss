@@ -226,10 +226,16 @@ body {
                         width: 240px;
                         height: 48px;
                         border-radius: 50px;
+                        cursor: pointer;
     
                         color: #fff;
                         font-size: calculator-rem(18px);
                         font-weight: 700;
+
+                        &:hover {
+                            background-color: rgba($color: $bg-b-green, $alpha: 0.8);
+                            letter-spacing: 0.5px;
+                        }
                     }
                 }
             }

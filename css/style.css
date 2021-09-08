@@ -327,9 +327,14 @@ body {
   width: 240px;
   height: 48px;
   border-radius: 50px;
+  cursor: pointer;
   color: #fff;
   font-size: 1.125pxrem;
   font-weight: 700;
+}
+.main .container .container-releases .content-releases .content-releases-item .button-buy:hover {
+  background-color: rgba(116, 148, 151, 0.8);
+  letter-spacing: 0.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
