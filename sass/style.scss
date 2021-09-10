@@ -6,236 +6,48 @@
 @import "_swiper.scss";
 
 body {
-    width: 100vw;
-    height: 100vh;
     font-family: "Open Sans", sans-serif;
 }
 
-.container {
-    width: 100vw;
-    .container-center {
-        @include flex-center;
-        width: $max-width;
-    }
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
 .header {
-    .container {
-        .container-top-bar {
-            .top-bar {
-                padding: 7px 0px;
-                width: 100%;
-
-                text-align: center;
-                font-size: calculator-rem(12);
-                font-weight: 300;
-                text-transform: uppercase;
-                color: $text-color-white;
-                background-color: $bg-color-dark-purple;
-            }
+    .container_top-bar {
+        background-color: $bg-color-dark-purple;
+        .top-bar {
+            @include container-center;
+            @include flex-center;
         }
+    }
 
-        .container-top-menu {
-            background-color: $bg-color-medium-purple;
-            nav.top-menu {
-                padding: 22px 0;
-                ul.header-mega-menu {
-                    @include flex-center;
+    .container_top-menu{
+        background-color: $bg-color-medium-purple;
 
-                    .mega-menu-padding {
-                        padding: 0 15px;
-                        cursor: pointer;
-                    }
-
-                    .mega-menu-item {
-                        color: $text-color-white;
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: calculator-rem(14);
-                    }
-
-                    .title {
-                        .h1 {
-                            padding: 0 15px;
-                            font-family: "Ovo", sans-serif;
-                            text-transform: uppercase;
-                            font-weight: 400;
-                            font-size: calculator-rem(48);
-                            color: $text-color-white;
-                        }
-                    }
-                }
-            }
-        }
-
-        .container-header-benefits {
-            margin-bottom: 44px;
-            background-color: $bg-color-dark-purple;
-            ul.header-benefits-list {
+        nav.top-menu {
+            padding: 22px 0;
+            @include container-center;
+            @include flex-center;
+            ul.header_mega-menu {
                 @include flex-center;
-                margin: 20px 0;
 
-                li {
-                    a {
-                        @include flex-center;
-
-                        .image-header-benefits-margin {
-                            margin-right: 15px;
-                        }
-                        .text-header-benefits {
-                            margin-right: 50px;
-                            p {
-                                &:first-child {
-                                    font-weight: 600;
-                                    font-size: calculator-rem(16);
-                                    color: $text-color-white;
-                                }
-
-                                font-size: calculator-rem(12);
-                                font-weight: 300;
-                                color: $text-color-white;
-                            }
-                        }
-                    }
+                .mega-menu-padding {
+                    padding: 0 15px;
+                    cursor: pointer;
                 }
-            }
-        }
-    }
-}
 
-.main {
-    .container {
-        background-color: $bg-color-primary-color;
-        .container-varieties-gemstones {
-            width: 100%;
-            .title-varieties-gemstone {
-                margin-bottom: 22px;
-                p {
-                    text-align: center;
-                    font-size: calculator-rem(24);
-                    font-weight: 300;
-                    color: $text-color-dark-gray;
-
-                    strong {
-                        font-weight: 700;
-                    }
+                .mega-menu-item {
+                    color: $text-color-white;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: calculator-rem(14);
                 }
-            }
-        }
-    }
 
-    .container {
-        .container-releases {
-            position: relative;
-            width: 100%;
-            .title-releases {
-                margin: 75px 0 20px 0;
-                p {
-                    text-align: center;
-                    font-size: calculator-rem(24);
-                    color: $text-color-dark-gray;
-                    font-weight: 400;
-                    strong {
-                        font-weight: 700;
-                    }
-                }
-            }
-
-            .content-releases {
-                display: flex;                
-                
-                .content-releases-item {
-                    width: 240px;
-
-                    .content-image {
-                        display: flex;
-                        flex-direction: column;
-
-                        // .image {
-                        //     width: 100%;
-                        //     height: 100%;
-                        //     display: flex;
-                        // }
-    
-                        .image-selo {
-                            margin-bottom: 20px;
-                            width: 240px;
-                            height: 28px;
-                            display: flex;
-
-                            .news {
-                                @include flex-center;
-                                flex-grow: 1;
-
-                                background-color: $bg-b-light-purple;
-                                color: #fff;
-                                font-size: calculator-rem(12);
-                                font-weight: 800;
-                            }
-    
-                            .free-shipping {
-                                @include flex-center;
-                                flex-grow: 1;
-                                
-                                background-color: $bg-b-dark-purple;
-                                color: #fff;
-                                font-size: calculator-rem(12);
-                                font-weight: 800;
-                            }
-                        }
-                    }
-    
-                    .name-item {
-                        width: 100%;
-                        height: 100px;
-                        text-align: center;
-                        .primary-name {
-                            font-size: calculator-rem(18);
-                            font-weight: 400;
-                            color: $text-color-medium-purple;                        
-                        }
-                    }
-    
-                    .secundary-name {
-                        text-align: center;
-                        font-size: calculator-rem(14);
+                .title {
+                    .h1 {
+                        padding: 0 15px;
+                        font-family: "Ovo", sans-serif;
+                        text-transform: uppercase;
                         font-weight: 400;
-                        color: $text-color-medium-purple;  
-                    }
-    
-                    .value-item {
-                        .value {
-                            text-align: center;
-                            font-size: calculator-rem(24);
-                            font-weight: 700;
-                            color: $text-color-light-purple;
-                        }
-    
-                        .secundary-name {
-                            margin-bottom: 24px;
-                        }
-                    }
-    
-                    .button-buy {
-                        @include flex-center;
-                        background-color: $bg-b-green;
-                        width: 240px;
-                        height: 48px;
-                        border-radius: 50px;
-                        cursor: pointer;
-    
-                        color: #fff;
-                        font-size: calculator-rem(18px);
-                        font-weight: 700;
-
-                        &:hover {
-                            background-color: rgba($color: $bg-b-green, $alpha: 0.8);
-                            letter-spacing: 0.5px;
-                        }
+                        font-size: calculator-rem(48);
+                        color: $text-color-white;
                     }
                 }
             }

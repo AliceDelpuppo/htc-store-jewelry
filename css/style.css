@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Ovo&display=swap");
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -6,6 +11,7 @@
 }
 
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -134,207 +140,72 @@ h1 {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Open Sans", sans-serif;
 }
 
-.container {
-  width: 100vw;
-}
-.container .container-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1440px;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.header .container .container-top-bar .top-bar {
-  padding: 7px 0px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #ffffff;
+.header .container_top-bar {
   background-color: #614B65;
 }
-.header .container .container-top-menu {
-  background-color: #9A7AA0;
-}
-.header .container .container-top-menu nav.top-menu {
-  padding: 22px 0;
-}
-.header .container .container-top-menu nav.top-menu ul.header-mega-menu {
+.header .container_top-bar .top-bar {
+  display: block;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .container .container-top-menu nav.top-menu ul.header-mega-menu .mega-menu-padding {
+@media screen and (max-width: 1480px) {
+  .header .container_top-bar .top-bar {
+    max-width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.header .container_top-menu {
+  background-color: #9A7AA0;
+}
+.header .container_top-menu nav.top-menu {
+  padding: 22px 0;
+  display: block;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1480px) {
+  .header .container_top-menu nav.top-menu {
+    max-width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+.header .container_top-menu nav.top-menu ul.header_mega-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .container_top-menu nav.top-menu ul.header_mega-menu .mega-menu-padding {
   padding: 0 15px;
   cursor: pointer;
 }
-.header .container .container-top-menu nav.top-menu ul.header-mega-menu .mega-menu-item {
+.header .container_top-menu nav.top-menu ul.header_mega-menu .mega-menu-item {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem;
 }
-.header .container .container-top-menu nav.top-menu ul.header-mega-menu .title .h1 {
+.header .container_top-menu nav.top-menu ul.header_mega-menu .title .h1 {
   padding: 0 15px;
   font-family: "Ovo", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 3rem;
   color: #ffffff;
-}
-.header .container .container-header-benefits {
-  margin-bottom: 44px;
-  background-color: #614B65;
-}
-.header .container .container-header-benefits ul.header-benefits-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
-}
-.header .container .container-header-benefits ul.header-benefits-list li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .container .container-header-benefits ul.header-benefits-list li a .image-header-benefits-margin {
-  margin-right: 15px;
-}
-.header .container .container-header-benefits ul.header-benefits-list li a .text-header-benefits {
-  margin-right: 50px;
-}
-.header .container .container-header-benefits ul.header-benefits-list li a .text-header-benefits p {
-  font-size: 0.75rem;
-  font-weight: 300;
-  color: #ffffff;
-}
-.header .container .container-header-benefits ul.header-benefits-list li a .text-header-benefits p:first-child {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #ffffff;
-}
-
-.main .container {
-  background-color: #ffffff;
-}
-.main .container .container-varieties-gemstones {
-  width: 100%;
-}
-.main .container .container-varieties-gemstones .title-varieties-gemstone {
-  margin-bottom: 22px;
-}
-.main .container .container-varieties-gemstones .title-varieties-gemstone p {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #5C5762;
-}
-.main .container .container-varieties-gemstones .title-varieties-gemstone p strong {
-  font-weight: 700;
-}
-.main .container .container-releases {
-  position: relative;
-  width: 100%;
-}
-.main .container .container-releases .title-releases {
-  margin: 75px 0 20px 0;
-}
-.main .container .container-releases .title-releases p {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #5C5762;
-  font-weight: 400;
-}
-.main .container .container-releases .title-releases p strong {
-  font-weight: 700;
-}
-.main .container .container-releases .content-releases {
-  display: flex;
-}
-.main .container .container-releases .content-releases .content-releases-item {
-  width: 240px;
-}
-.main .container .container-releases .content-releases .content-releases-item .content-image {
-  display: flex;
-  flex-direction: column;
-}
-.main .container .container-releases .content-releases .content-releases-item .content-image .image-selo {
-  margin-bottom: 20px;
-  width: 240px;
-  height: 28px;
-  display: flex;
-}
-.main .container .container-releases .content-releases .content-releases-item .content-image .image-selo .news {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  background-color: #8D94BA;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 800;
-}
-.main .container .container-releases .content-releases .content-releases-item .content-image .image-selo .free-shipping {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  background-color: #542D84;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 800;
-}
-.main .container .container-releases .content-releases .content-releases-item .name-item {
-  width: 100%;
-  height: 100px;
-  text-align: center;
-}
-.main .container .container-releases .content-releases .content-releases-item .name-item .primary-name {
-  font-size: 1.125rem;
-  font-weight: 400;
-  color: #9A7AA0;
-}
-.main .container .container-releases .content-releases .content-releases-item .secundary-name {
-  text-align: center;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: #9A7AA0;
-}
-.main .container .container-releases .content-releases .content-releases-item .value-item .value {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #8D94BA;
-}
-.main .container .container-releases .content-releases .content-releases-item .value-item .secundary-name {
-  margin-bottom: 24px;
-}
-.main .container .container-releases .content-releases .content-releases-item .button-buy {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #749497;
-  width: 240px;
-  height: 48px;
-  border-radius: 50px;
-  cursor: pointer;
-  color: #fff;
-  font-size: 1.125pxrem;
-  font-weight: 700;
-}
-.main .container .container-releases .content-releases .content-releases-item .button-buy:hover {
-  background-color: rgba(116, 148, 151, 0.8);
-  letter-spacing: 0.5px;
 }
 
 /*# sourceMappingURL=style.css.map */
