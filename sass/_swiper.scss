@@ -9,22 +9,16 @@
     }
 
     .swiper-slide img {
-        display: block;
+        display: flex;
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }    
+    }
 }
 
 // --------------------------
 
 .mySwiper-varieties-gemstones {
-    html,
-    body {
-        position: relative;
-        height: 100%;
-    }
-
     .swiper-slide {
         text-align: center;
         height: 250px;
@@ -43,7 +37,7 @@
                 font-weight: 400;
                 color: #9a7aa0;
             }
-        }        
+        }
     }
 
     .swiper-pagination {
@@ -53,34 +47,129 @@
     width: calc(100% - 400px);
 }
 
-
 //  ----------------------------------
 
-.mySwiper-content-releases {
-    position: static;
+.container_releases {
+    // position: static;
     width: calc(100% - 426px);
     .swiper-slide {
-        .content-image {
-            .image {
-                width: 100%;
-                height: 100%;
+    }
+
+    // .swiper-button-next {
+    //     right: 120px;
+    //     margin: 0;
+    // }
+    // .swiper-button-prev {
+    //     left: 120px;
+    //     margin: 0;
+
+    // }
+
+    // .swiper-pagination {
+    //     top: 680px;
+    // }
+
+    .releases {
+
+        .content_releases,.mySwiper-content_releases {
+
+            .swiper-wrapper {
                 display: flex;
+
+                .content_releases-item {
+                    width: 240px;
+                    .content_releases-item-image {
+                        display: flex;
+                        flex-direction: column;
+                        .image {
+                            display: flex;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .image_selo {
+                            margin-bottom: 20px;
+                            width: 240px;
+                            height: 28px;
+                            display: flex;
+                            .image_selo-news {
+                                @include flex-center;
+                                flex-grow: 1;
+
+                                background-color: $bg-b-light-purple;
+                                color: #fff;
+                                font-size: calculator-rem(12);
+                                font-weight: 800;
+                            }
+
+                            .image_selo_free-shipping {
+                                @include flex-center;
+                                flex-grow: 1;
+
+                                background-color: $bg-b-dark-purple;
+                                color: #fff;
+                                font-size: calculator-rem(12);
+                                font-weight: 800;
+                            }
+                        }
+                    }
+
+                    .name-item {
+                        width: 100%;
+                        height: 100px;
+                        text-align: center;
+                    }
+
+                    .value-item {
+                        .value {
+                            text-align: center;
+                            font-size: calculator-rem(24);
+                            font-weight: 700;
+                            color: $text-color-light-purple;
+                        }
+
+                        .p_text_secundary-name {
+                            margin-bottom: 24px;
+                        }
+                    }
+
+                    .p_text_primary-name {
+                        font-size: calculator-rem(18);
+                        font-weight: 400;
+                        color: $text-color-medium-purple;
+                    }
+
+                    .p_text_secundary-name {
+                        text-align: center;
+                        font-size: calculator-rem(14);
+                        font-weight: 400;
+                        color: $text-color-medium-purple;
+                    }
+
+                    .button-buy {
+                        @include flex-center;
+                        background-color: $bg-b-green;
+                        // width: 240px;
+                        width: 100%;
+                        height: 48px;
+                        border-radius: 50px;
+                        cursor: pointer;
+
+                        color: #fff;
+                        font-size: calculator-rem(18px);
+                        font-weight: 700;
+
+                        .button {
+                        }
+
+                        &:hover {
+                            background-color: rgba($color: $bg-b-green, $alpha: 0.8);
+                            letter-spacing: 0.5px;
+                        }
+                    }
+                }
             }
         }
-    }
-
-    .swiper-button-next {
-        right: 120px;
-        margin: 0;
-    }
-    .swiper-button-prev {
-        left: 120px;
-        margin: 0;
-        
-    }
-
-    .swiper-pagination {
-        top: 680px;
     }
 }
 
@@ -107,7 +196,6 @@
     border-radius: 50%;
     margin: 0 134px;
 }
-
 
 // .swiper {
 //     width: 100%;

@@ -62,7 +62,7 @@ h1 {
   text-align: center;
 }
 .mySwiper-main-banner .swiper-slide img {
-  display: block;
+  display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -70,11 +70,6 @@ h1 {
 
 .mySwiper-varieties-gemstones {
   width: calc(100% - 400px);
-}
-.mySwiper-varieties-gemstones html,
-.mySwiper-varieties-gemstones body {
-  position: relative;
-  height: 100%;
 }
 .mySwiper-varieties-gemstones .swiper-slide {
   text-align: center;
@@ -96,25 +91,91 @@ h1 {
   top: 220px;
 }
 
-.mySwiper-content-releases {
-  position: static;
+.container_releases {
   width: calc(100% - 426px);
 }
-.mySwiper-content-releases .swiper-slide .content-image .image {
-  width: 100%;
-  height: 100%;
+.container_releases .releases .content_releases .swiper-wrapper, .container_releases .releases .mySwiper-content_releases .swiper-wrapper {
   display: flex;
 }
-.mySwiper-content-releases .swiper-button-next {
-  right: 120px;
-  margin: 0;
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item {
+  width: 240px;
 }
-.mySwiper-content-releases .swiper-button-prev {
-  left: 120px;
-  margin: 0;
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .content_releases-item-image, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image {
+  display: flex;
+  flex-direction: column;
 }
-.mySwiper-content-releases .swiper-pagination {
-  top: 680px;
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo {
+  margin-bottom: 20px;
+  width: 240px;
+  height: 28px;
+  display: flex;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo-news, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo-news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #8D94BA;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo_free-shipping, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo_free-shipping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #542D84;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .name-item, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .name-item {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .value-item .value, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .value-item .value {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #8D94BA;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .value-item .p_text_secundary-name, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .value-item .p_text_secundary-name {
+  margin-bottom: 24px;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .p_text_primary-name, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text_primary-name {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #9A7AA0;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .p_text_secundary-name, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text_secundary-name {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #9A7AA0;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .button-buy, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .button-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #749497;
+  width: 100%;
+  height: 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.125pxrem;
+  font-weight: 700;
+}
+.container_releases .releases .content_releases .swiper-wrapper .content_releases-item .button-buy:hover, .container_releases .releases .mySwiper-content_releases .swiper-wrapper .content_releases-item .button-buy:hover {
+  background-color: rgba(116, 148, 151, 0.8);
+  letter-spacing: 0.5px;
 }
 
 :root {
@@ -139,73 +200,170 @@ h1 {
   margin: 0 134px;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
+}
+
+.container-center {
+  display: block;
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1480px) {
+  .container-center {
+    max-width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.text-strong {
+  font-weight: 700;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .header .container_top-bar {
   background-color: #614B65;
 }
 .header .container_top-bar .top-bar {
-  display: block;
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1480px) {
-  .header .container_top-bar .top-bar {
-    max-width: calc(100% - 40px);
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+.header .container_top-bar .top-bar .p_top-bar {
+  padding: 7px 0px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #614B65;
 }
 .header .container_top-menu {
   background-color: #9A7AA0;
 }
 .header .container_top-menu nav.top-menu {
   padding: 22px 0;
-  display: block;
-  width: 100%;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1480px) {
-  .header .container_top-menu nav.top-menu {
-    max-width: calc(100% - 40px);
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-.header .container_top-menu nav.top-menu ul.header_mega-menu {
+.header .container_top-menu nav.top-menu .container_mega-menu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .container_top-menu nav.top-menu ul.header_mega-menu .mega-menu-padding {
+.header .container_top-menu nav.top-menu .container_mega-menu .mega-menu-padding {
   padding: 0 15px;
   cursor: pointer;
 }
-.header .container_top-menu nav.top-menu ul.header_mega-menu .mega-menu-item {
+.header .container_top-menu nav.top-menu .container_mega-menu .mega-menu-item {
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem;
 }
-.header .container_top-menu nav.top-menu ul.header_mega-menu .title .h1 {
+.header .container_top-menu nav.top-menu .container_mega-menu .title .h1 {
   padding: 0 15px;
   font-family: "Ovo", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 3rem;
   color: #ffffff;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 {
+  display: flex;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 a {
+  color: #ffffff;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 ul.level-2 {
+  padding-left: 23px;
+  width: 240px;
+  background-color: #ffffff;
+  border-top: 6px solid #614b65;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 ul.level-2 li.level-2 a {
+  text-transform: capitalize;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #302E2B;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 ul.level-2 li.level-2 ul.level-3 {
+  background-color: #9A7AA0;
+  border-top: 6px solid #614b65;
+  padding-left: 23px;
+}
+.header .container_top-menu nav.top-menu .container_mega-menu .container_menu ul.level-1 li.level-1 ul.level-2 li.level-2 ul.level-3 li.level-3 a {
+  color: #ffffff;
+}
+
+main .container_benefits {
+  margin-bottom: 44px;
+  background-color: #614B65;
+}
+main .container_benefits .container_benefits-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_image-margin {
+  margin-right: 15px;
+}
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text {
+  margin-right: 50px;
+}
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text .p_benefits_text {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #ffffff;
+}
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text .p_benefits_text:first-child {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+main .container_varieties-gemstones .varieties-gemstones .varieties-gemstone-title {
+  margin-bottom: 22px;
+}
+main .container_varieties-gemstones .varieties-gemstones .varieties-gemstone-title .p_title-text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #5C5762;
+}
+main .container_releases .releases .container_releases-title {
+  margin: 75px 0 20px 0;
+}
+main .container_releases .releases .container_releases-title .p_title-text {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #5C5762;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

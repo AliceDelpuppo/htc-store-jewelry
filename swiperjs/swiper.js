@@ -8,7 +8,7 @@ var swiper = new Swiper(".mySwiper-main-banner", {
         el: ".swiper-pagination",
         clickable: true,
     },
-    mousewheel: true,
+    // mousewheel: true,
     keyboard: true,
 });
 
@@ -27,7 +27,7 @@ var swiper = new Swiper(".mySwiper-varieties-gemstones", {
 
 // ----------------------------
 
-var swiper = new Swiper(".mySwiper-content-releases", {
+var swiper = new Swiper(".mySwiper-content_releases", {
     slidesPerView: 4,
     spaceBetween: 20,
     // freeMode: true,

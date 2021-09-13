@@ -5,27 +5,55 @@
 @import "_reset.scss";
 @import "_swiper.scss";
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
     font-family: "Open Sans", sans-serif;
+}
+
+.container-center {
+    @include container-center;
+}
+
+.text-strong {
+    font-weight: 700;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
 }
 
 .header {
     .container_top-bar {
         background-color: $bg-color-dark-purple;
         .top-bar {
-            @include container-center;
             @include flex-center;
+            .p_top-bar {
+                padding: 7px 0px;
+                text-align: center;
+                font-size: calculator-rem(12);
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $text-color-white;
+                background-color: $bg-color-dark-purple;
+            }
         }
     }
 
-    .container_top-menu{
+    .container_top-menu {
         background-color: $bg-color-medium-purple;
 
         nav.top-menu {
             padding: 22px 0;
-            @include container-center;
             @include flex-center;
-            ul.header_mega-menu {
+
+            .container_mega-menu {
                 @include flex-center;
 
                 .mega-menu-padding {
@@ -50,7 +78,135 @@ body {
                         color: $text-color-white;
                     }
                 }
+
+                .container_menu {
+                    ul.level-1 {
+                        display: flex;
+                        li.level-1 {
+                            a {
+                                color: $text-color-white;
+                            }
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            font-size: calculator-rem(14);
+
+                            ul.level-2 {
+                                padding-left: 23px;
+                                width: 240px;
+                                background-color: #ffffff;
+                                border-top: 6px solid #614b65;
+
+                                li.level-2 {
+                                    a {
+                                        text-transform: capitalize;
+                                        font-size: calculator-rem(13);
+                                        font-weight: 400;
+                                        color: $text-color-menu-item;
+                                    }
+
+                                    ul.level-3 {
+                                        background-color: $bg-color-medium-purple;
+                                        border-top: 6px solid #614b65;
+                                        padding-left: 23px;
+                                        li.level-3 {
+                                            a {
+                                                color: $text-color-white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
+
+main {
+    .container_benefits {
+        margin-bottom: 44px;
+        background-color: $bg-color-dark-purple;
+
+        .container_benefits-list {
+            @include flex-center;
+            padding: 20px 0;
+
+            .container_benefits-list-item {
+                .benefits-list-item-link {
+                    @include flex-center;
+
+                    .benefits_image-margin {
+                        margin-right: 15px;
+                    }
+
+                    .benefits_text {
+                        margin-right: 50px;
+
+                        .p_benefits_text {
+                            &:first-child {
+                                font-weight: 600;
+                                font-size: calculator-rem(16);
+                                color: $text-color-white;
+                            }
+
+                            font-size: calculator-rem(12);
+                            font-weight: 300;
+                            color: $text-color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container_varieties-gemstones {
+        .varieties-gemstones {
+            .varieties-gemstone-title {
+                margin-bottom: 22px;
+
+                .p_title-text {
+                    text-align: center;
+                    font-size: calculator-rem(24);
+                    font-weight: 300;
+                    color: $text-color-dark-gray;
+                }
+            }
+        }
+    }
+
+    .container_releases {
+        .releases {
+            .container_releases-title {
+                margin: 75px 0 20px 0;
+
+                .p_title-text {
+                    text-align: center;
+                    font-size: calculator-rem(24);
+                    color: $text-color-dark-gray;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+// ul.level-1 {
+//     border: 1px solid red;
+//     li.level-1 {
+//         border: 3px solid green;
+//         ul.level-2 {
+//             border: 1px solid blue;
+//             li.level-2 {
+//                 border: 1px solid purple;
+//                 ul.level-3 {
+//                     border: 1px solid yellow;
+//                     li.level-3 {
+//                         border: 1px solid pink;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
