@@ -29,7 +29,7 @@ var swiper = new Swiper(".mySwiper-varieties-gemstones", {
 
 var swiper = new Swiper(".mySwiper-content_releases", {
     slidesPerView: 4,
-    spaceBetween: 20,
+    // spaceBetween: 13,
     // freeMode: true,
     navigation: {
         nextEl: ".swiper-button-next",

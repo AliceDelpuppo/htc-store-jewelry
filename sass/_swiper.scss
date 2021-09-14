@@ -50,123 +50,128 @@
 //  ----------------------------------
 
 .container_releases {
-    // position: static;
-    width: calc(100% - 426px);
     .swiper-slide {
+        padding: 9px;
     }
 
-    // .swiper-button-next {
-    //     right: 120px;
-    //     margin: 0;
-    // }
-    // .swiper-button-prev {
-    //     left: 120px;
-    //     margin: 0;
+    .releases.container-center {
+        .container_wrapper {
+            position: relative;
+            max-width: 1014px + 18px;
+            display: flex;
+            align-items: center;
+            .mySwiper-content_releases {
+                position: static;
 
-    // }
+                .swiper-wrapper {
+                    border: 1px solid red;
 
-    // .swiper-pagination {
-    //     top: 680px;
-    // }
-
-    .releases {
-
-        .content_releases,.mySwiper-content_releases {
-
-            .swiper-wrapper {
-                display: flex;
-
-                .content_releases-item {
-                    width: 240px;
-                    .content_releases-item-image {
-                        display: flex;
-                        flex-direction: column;
-                        .image {
+                    .content_releases-item {
+                        .content_releases-item-image {
                             display: flex;
+                            flex-direction: column;
+
+                            .image {
+                                img {
+                                    width: 100%;
+                                    display: flex;
+                                    height: auto;
+                                }
+                            }
+
+                            .image_selo {
+                                width: 100%;
+                                margin-bottom: 20px;
+                                height: 28px;
+                                display: flex;
+
+                                .image_selo-news {
+                                    @include flex-center;
+                                    flex-grow: 1;
+
+                                    background-color: $bg-b-light-purple;
+                                    color: #fff;
+                                    font-size: calculator-rem(12);
+                                    font-weight: 800;
+                                }
+
+                                .image_selo_free-shipping {
+                                    @include flex-center;
+                                    flex-grow: 1;
+
+                                    background-color: $bg-b-dark-purple;
+                                    color: #fff;
+                                    font-size: calculator-rem(12);
+                                    font-weight: 800;
+                                }
+                            }
+                        }
+
+                        .name-item {
                             width: 100%;
-                            height: 100%;
-                        }
-
-                        .image_selo {
-                            margin-bottom: 20px;
-                            width: 240px;
-                            height: 28px;
-                            display: flex;
-                            .image_selo-news {
-                                @include flex-center;
-                                flex-grow: 1;
-
-                                background-color: $bg-b-light-purple;
-                                color: #fff;
-                                font-size: calculator-rem(12);
-                                font-weight: 800;
-                            }
-
-                            .image_selo_free-shipping {
-                                @include flex-center;
-                                flex-grow: 1;
-
-                                background-color: $bg-b-dark-purple;
-                                color: #fff;
-                                font-size: calculator-rem(12);
-                                font-weight: 800;
-                            }
-                        }
-                    }
-
-                    .name-item {
-                        width: 100%;
-                        height: 100px;
-                        text-align: center;
-                    }
-
-                    .value-item {
-                        .value {
+                            height: 100px;
                             text-align: center;
-                            font-size: calculator-rem(24);
-                            font-weight: 700;
-                            color: $text-color-light-purple;
+                        }
+
+                        .value-item {
+                            .value {
+                                text-align: center;
+                                font-size: calculator-rem(24);
+                                font-weight: 700;
+                                color: $text-color-light-purple;
+                            }
+
+                            .p_text_secundary-name {
+                                margin-bottom: 24px;
+                            }
+                        }
+
+                        .p_text_primary-name {
+                            font-size: calculator-rem(18);
+                            font-weight: 400;
+                            color: $text-color-medium-purple;
                         }
 
                         .p_text_secundary-name {
-                            margin-bottom: 24px;
-                        }
-                    }
-
-                    .p_text_primary-name {
-                        font-size: calculator-rem(18);
-                        font-weight: 400;
-                        color: $text-color-medium-purple;
-                    }
-
-                    .p_text_secundary-name {
-                        text-align: center;
-                        font-size: calculator-rem(14);
-                        font-weight: 400;
-                        color: $text-color-medium-purple;
-                    }
-
-                    .button-buy {
-                        @include flex-center;
-                        background-color: $bg-b-green;
-                        // width: 240px;
-                        width: 100%;
-                        height: 48px;
-                        border-radius: 50px;
-                        cursor: pointer;
-
-                        color: #fff;
-                        font-size: calculator-rem(18px);
-                        font-weight: 700;
-
-                        .button {
+                            text-align: center;
+                            font-size: calculator-rem(14);
+                            font-weight: 400;
+                            color: $text-color-medium-purple;
                         }
 
-                        &:hover {
-                            background-color: rgba($color: $bg-b-green, $alpha: 0.8);
-                            letter-spacing: 0.5px;
+                        .button-buy {
+                            @include flex-center;
+                            background-color: $bg-b-green;
+                            // width: 240px;
+                            width: 100%;
+                            height: 48px;
+                            border-radius: 50px;
+                            cursor: pointer;
+
+                            color: #fff;
+                            font-size: calculator-rem(18px);
+                            font-weight: 700;
+
+                            &:hover {
+                                background-color: rgba($color: $bg-b-green, $alpha: 0.8);
+                                letter-spacing: 0.5px;
+                            }
+                            .button {
+                            }
                         }
                     }
+                }
+
+                .swiper-button-next {
+                    right: -100px;
+                }
+
+                .swiper-button-prev {
+                    left: -100px;
+                }
+
+                .swiper-pagination {
+                    bottom: -50px;
                 }
             }
         }
@@ -194,7 +199,7 @@
     width: 58px;
     height: 58px;
     border-radius: 50%;
-    margin: 0 134px;
+    // margin: 0 134px;
 }
 
 // .swiper {
