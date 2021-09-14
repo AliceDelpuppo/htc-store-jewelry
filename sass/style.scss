@@ -30,6 +30,9 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     .container_top-bar {
         background-color: $bg-color-dark-purple;
         .top-bar {
@@ -80,37 +83,111 @@ body {
                 }
 
                 .container_menu {
+                    @mixin menu-text($color, $font-size) {
+                        text-transform: capitalize;
+                        font-size: calculator-rem($font-size);
+                        font-weight: 400;
+                        color: $color;
+                        @content;
+                    }
+
                     ul.level-1 {
                         display: flex;
                         li.level-1 {
-                            a {
-                                color: $text-color-white;
+                            position: relative;
+                            &:not(:first-child) {
+                                ul.level-2 {
+                                    // display: none;   TODO
+                                }
                             }
-                            text-transform: uppercase;
-                            font-weight: 700;
-                            font-size: calculator-rem(14);
+
+                            > a {
+                                padding: 0 15px;
+                                @include menu-text($text-color-white, 14) {
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            &:nth-last-child(-n + 3) {
+                                ul.level-2 {
+                                    right: 0;
+                                }
+
+                                ul.level-3 {
+                                }
+                            }
+
+                            &:hover {
+                                > a {
+                                    color: $text-color-hover-menu;
+                                }
+
+                                ul.level-2 {
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
 
                             ul.level-2 {
-                                padding-left: 23px;
+                                position: absolute;
+                                padding: 12px 0;
                                 width: 240px;
-                                background-color: #ffffff;
+                                max-height: 380px;
+                                // overflow-y: auto;
+                                background-color: rgba($color: #ffffff, $alpha: 0.95);
                                 border-top: 6px solid #614b65;
 
+                                opacity: 0;
+                                visibility: hidden;
+                                transition: 0.3s;
+                                top: 49px;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    display: block;
+                                    height: 30px;
+                                    width: 100%;
+                                    left: 0;
+                                    bottom: calc(100% + 6px);
+                                    background-color: red;
+                                }
+
                                 li.level-2 {
-                                    a {
-                                        text-transform: capitalize;
-                                        font-size: calculator-rem(13);
-                                        font-weight: 400;
-                                        color: $text-color-menu-item;
+                                    display: flex;
+                                    padding: 10px 0 10px 23px;
+                                    > a {
+                                        width: 100%;
+                                        @include menu-text($text-color-menu-item, 13);
+                                    }
+
+                                    &:hover {
+                                        background-color: #f1f1f1;
+
+                                        ul.level-3 {
+                                            opacity: 1;
+                                            visibility: visible;
+                                        }
                                     }
 
                                     ul.level-3 {
-                                        background-color: $bg-color-medium-purple;
+                                        position: absolute;
+                                        background-color: rgba($color: $bg-color-medium-purple, $alpha: 0.95);
                                         border-top: 6px solid #614b65;
-                                        padding-left: 23px;
+                                        width: 240px;
+
+                                        left: 100%;
+                                        top: -6px;
+                                        height: calc(100% + 6px);
+
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        transition: 0.3s;
+
                                         li.level-3 {
-                                            a {
-                                                color: $text-color-white;
+                                            > a {
+                                                @include menu-text($text-color-white, 13);
                                             }
                                         }
                                     }
