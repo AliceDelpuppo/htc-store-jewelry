@@ -91,103 +91,143 @@ body {
                         @content;
                     }
 
-                    ul.level-1 {
-                        display: flex;
-                        li.level-1 {
-                            position: relative;
-                            &:not(:first-child) {
-                                ul.level-2 {
-                                    // display: none;   TODO
-                                }
-                            }
+                    .menu_container-1 {
+                        ul.level-1 {
+                            display: flex;
 
-                            > a {
-                                padding: 0 15px;
-                                @include menu-text($text-color-white, 14) {
-                                    text-transform: uppercase;
-                                    font-weight: 700;
-                                }
-                            }
-
-                            &:nth-last-child(-n + 3) {
-                                ul.level-2 {
-                                    right: 0;
-                                }
-
-                                ul.level-3 {
-                                }
-                            }
-
-                            &:hover {
-                                > a {
-                                    color: $text-color-hover-menu;
-                                }
-
-                                ul.level-2 {
-                                    opacity: 1;
-                                    visibility: visible;
-                                }
-                            }
-
-                            ul.level-2 {
-                                position: absolute;
-                                padding: 12px 0;
-                                width: 240px;
-                                max-height: 380px;
-                                // overflow-y: auto;
-                                background-color: rgba($color: #ffffff, $alpha: 0.95);
-                                border-top: 6px solid #614b65;
-
-                                opacity: 0;
-                                visibility: hidden;
-                                transition: 0.3s;
-                                top: 49px;
-
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    display: block;
-                                    height: 30px;
-                                    width: 100%;
-                                    left: 0;
-                                    bottom: calc(100% + 6px);
-                                    background-color: red;
-                                }
-
-                                li.level-2 {
-                                    display: flex;
-                                    padding: 10px 0 10px 23px;
-                                    > a {
-                                        width: 100%;
-                                        @include menu-text($text-color-menu-item, 13);
+                            li.level-1 {
+                                position: relative;
+                                &:not(:first-child) {
+                                    ul.level-2 {
+                                        // display: none;   TODO
                                     }
+                                }
 
-                                    &:hover {
-                                        background-color: #f1f1f1;
+                                > a {
+                                    padding: 0 15px;
+                                    @include menu-text($text-color-white, 14) {
+                                        text-transform: uppercase;
+                                        font-weight: 700;
+                                    }
+                                }
 
-                                        ul.level-3 {
-                                            opacity: 1;
-                                            visibility: visible;
+                                &:nth-last-child(-n + 3) {
+                                    .menu_container-2{
+                                        right: 0;
+                                        ul.level-2 {
+                                        }
+                                    }                                    
+
+                                    .menu_container-3{
+                                        left: 0;
+                                        ul.level-3 { //  TODO
                                         }
                                     }
+                                    
+                                }
 
-                                    ul.level-3 {
-                                        position: absolute;
-                                        background-color: rgba($color: $bg-color-medium-purple, $alpha: 0.95);
-                                        border-top: 6px solid #614b65;
+                                &:hover {
+                                    > a {
+                                        color: $text-color-hover-menu;
+                                    }
+
+                                    .menu_container-2 {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        ul.level-2 {
+                                            
+                                        }
+                                    }
+                                }
+
+                                .menu_container-2 {
+                                    position: absolute;
+                                    top: 49px;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: 0.3s;  
+
+                                    ul.level-2 {
+                                        overflow-y: auto;
+                                        padding: 12px 0;
                                         width: 240px;
+                                        max-height: 380px;
+                                        height: 100%;
+                                        background-color: rgba($color: #ffffff, $alpha: 0.95);
+                                        border-top: 6px solid #614B65;
 
-                                        left: 100%;
-                                        top: -6px;
-                                        height: calc(100% + 6px);
+                                                                              
 
-                                        opacity: 0;
-                                        visibility: hidden;
-                                        transition: 0.3s;
+                                        &::before {
+                                            content: "";
+                                            display: block;
+                                            position: absolute;
+                                            height: 30px;
+                                            width: 100%;
+                                            left: 0;
+                                            bottom: 100%;
+                                            // background-color: red;
+                                        }
 
-                                        li.level-3 {
+                                        li.level-2 {
+                                            display: flex;
+                                            padding: 10px 0 10px 23px;
                                             > a {
-                                                @include menu-text($text-color-white, 13);
+                                                width: 100%;
+                                                @include menu-text($text-color-menu-item, 13);
+                                            }
+
+                                            &:hover {
+                                                background-color: #f1f1f1;
+
+                                                .menu_container-3 {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                    ul.level-3 {
+                                                        
+                                                    }
+                                                }
+                                            }
+
+                                            .menu_container-3 {
+                                                position: absolute;
+                                                left: 100%;
+                                                top: 0px;
+                                                height: 100%;   
+                                                
+                                                opacity: 0;
+                                                visibility: hidden;
+                                                transition: 0.3s;
+
+                                                ul.level-3 {
+                                                    padding: 12px 0;
+                                                    overflow-y: auto;
+                                                    background-color: rgba(
+                                                        $color: $bg-color-medium-purple,
+                                                        $alpha: 0.95
+                                                    );
+                                                    border-top: 6px solid #614b65;
+                                                    width: 240px;
+                                                    max-height: 380px;
+                                                    height: 100%;
+
+                                                    // opacity: 0;
+                                                    // visibility: hidden;
+                                                    // transition: 0.3s;
+
+                                                    li.level-3 {
+                                                        display: flex;
+                                                        padding: 5px 0 10px 23px;
+                                                        > a {
+                                                            width: 100%;
+                                                            @include menu-text($text-color-white, 13);
+                                                        }
+
+                                                        &:hover {
+                                                            background-color: #614B65;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
