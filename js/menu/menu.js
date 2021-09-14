@@ -10,29 +10,33 @@ const menu = fetch('js/menu/menu.json').then(function(response){
 function createMenu (menu, level = MAXLEVEL){
     console.log(menu)
     
-    const $ul = document.createElement('ul')
-    $ul.classList.add(`level-${MAXLEVEL - level + 1}`)
+    const _div = document.createElement('div')
+    _div.classList.add(`menu_container-${MAXLEVEL - level + 1}`)
+    const _ul = document.createElement('ul')
+    _ul.classList.add(`level-${MAXLEVEL - level + 1}`)
+
+    _div.appendChild(_ul)
 
     if(level === 0){
-        return $ul
+        return _div
     }
 
     menu.forEach(function(menuItem) {
-        const $li = document.createElement('li')
-        $li.classList.add(`level-${MAXLEVEL - level + 1}`)
-        const $a = document.createElement('a')
-        $a.setAttribute('href', menuItem.url)
-        $a.append(menuItem.name)
+        const _li = document.createElement('li')
+        _li.classList.add(`level-${MAXLEVEL - level + 1}`)
+        const _a = document.createElement('a')
+        _a.setAttribute('href', menuItem.url)
+        _a.append(menuItem.name)
 
-        $li.appendChild($a)
-        $ul.appendChild($li)
+        _li.appendChild(_a)
+        _ul.appendChild(_li)
 
         if(menuItem.children && menuItem.children.length) {
-            const $ulChildren = createMenu(menuItem.children, level - 1)
-            $li.appendChild($ulChildren)
-            $li.classList.add(`level-${MAXLEVEL - level + 1}`)
+            const _ulChildren = createMenu(menuItem.children, level - 1)
+            _li.appendChild(_ulChildren)
+            _li.classList.add(`level-${MAXLEVEL - level + 1}`)
         }       
     })
 
-    return $ul
+    return _div
 }
