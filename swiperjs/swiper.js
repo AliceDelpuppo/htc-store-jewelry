@@ -43,3 +43,19 @@ var swiper = new Swiper(".mySwiper-content_releases", {
     keyboard: true,
 });
 
+// ----------------------------
+
+var swiper = new Swiper(".mySwiper-category-banner", {
+    // cssMode: true,
+    spaceBetween: 5,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // mousewheel: true,
+    keyboard: true,
+});

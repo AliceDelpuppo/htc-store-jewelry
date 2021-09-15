@@ -91,6 +91,9 @@ h1 {
   top: 220px;
 }
 
+.container_releases {
+  margin-bottom: 150px;
+}
 .container_releases .swiper-slide {
   padding: 9px;
 }
@@ -112,13 +115,13 @@ h1 {
   display: flex;
   height: auto;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image-selo {
   width: 100%;
   margin-bottom: 20px;
   height: 28px;
   display: flex;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo-news {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image-selo .image-selo-news {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +131,7 @@ h1 {
   font-size: 0.75rem;
   font-weight: 800;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image_selo .image_selo_free-shipping {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image .image-selo .image-selo-free-shipping {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,15 +152,15 @@ h1 {
   font-weight: 700;
   color: #8D94BA;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .value-item .p_text_secundary-name {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .value-item .p_text-secundary-name {
   margin-bottom: 24px;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text_primary-name {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text-primary-name {
   font-size: 1.125rem;
   font-weight: 400;
   color: #9A7AA0;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text_secundary-name {
+.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .p_text-secundary-name {
   text-align: center;
   font-size: 0.875rem;
   font-weight: 400;
@@ -188,6 +191,31 @@ h1 {
 }
 .container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-pagination {
   bottom: -50px;
+}
+
+.container_category-banner .container_swiper-category-banner {
+  position: relative;
+  display: flex;
+}
+.container_category-banner .container_swiper-category-banner .swiper {
+  position: static;
+}
+.container_category-banner .container_swiper-category-banner .swiper .swiper-wrapper {
+  max-width: 510px;
+}
+.container_category-banner .container_swiper-category-banner .swiper .swiper-wrapper .swiper-slide .image {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+.container_category-banner .container_swiper-category-banner .swiper .swiper-button-next {
+  right: -80px;
+}
+.container_category-banner .container_swiper-category-banner .swiper .swiper-button-prev {
+  left: -80px;
+}
+.container_category-banner .container_swiper-category-banner .swiper .swiper-pagination {
+  bottom: -55px;
 }
 
 :root {
@@ -419,18 +447,18 @@ main .container_benefits .container_benefits-list .container_benefits-list-item 
   justify-content: center;
   align-items: center;
 }
-main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_image-margin {
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits-image-margin {
   margin-right: 15px;
 }
-main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text {
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits-text {
   margin-right: 50px;
 }
-main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text .p_benefits_text {
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits-text .p_benefits-text {
   font-size: 0.75rem;
   font-weight: 300;
   color: #ffffff;
 }
-main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits_text .p_benefits_text:first-child {
+main .container_benefits .container_benefits-list .container_benefits-list-item .benefits-list-item-link .benefits-text .p_benefits-text:first-child {
   font-weight: 600;
   font-size: 1rem;
   color: #ffffff;
@@ -452,6 +480,46 @@ main .container_releases .releases .container_releases-title .p_title-text {
   font-size: 1.5rem;
   color: #5C5762;
   font-weight: 400;
+}
+main .container_category-banner .content-category-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1150px;
+}
+main .container_category-banner .content-category-banner .category-banner-text {
+  text-align: center;
+  max-width: 450px;
+}
+main .container_category-banner .content-category-banner .category-banner-text .text-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9A7AA0;
+}
+main .container_category-banner .content-category-banner .category-banner-text .text-title-big {
+  margin-bottom: 15px;
+  font-size: 42px;
+  font-weight: 400;
+  color: #8D94BA;
+}
+main .container_category-banner .content-category-banner .category-banner-text .text-paragraph {
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #9A7AA0;
+}
+main .container_category-banner .content-category-banner .category-banner-text .text-button {
+  border: 1px solid #8D94BA;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 133px;
+  height: 38px;
+  color: #8D94BA;
+  font-size: 14px;
+  font-weight: 400;
+  color: #8D94BA;
 }
 
 /*# sourceMappingURL=style.css.map */
