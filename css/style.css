@@ -103,9 +103,6 @@ h1 {
 .container_releases .releases.container-center .container_wrapper .mySwiper-content_releases {
   position: static;
 }
-.container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper {
-  border: 1px solid red;
-}
 .container_releases .releases.container-center .container_wrapper .mySwiper-content_releases .swiper-wrapper .content_releases-item .content_releases-item-image {
   display: flex;
   flex-direction: column;
@@ -345,7 +342,7 @@ body {
   max-height: 380px;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.95);
-  border-top: 6px solid #614B65;
+  border-top: 6px solid #614b65;
 }
 .header .container_top-menu nav.top-menu .container_mega-menu .container_menu .menu_container-1 ul.level-1 li.level-1 .menu_container-2 ul.level-2::before {
   content: "";
@@ -404,7 +401,7 @@ body {
   color: #ffffff;
 }
 .header .container_top-menu nav.top-menu .container_mega-menu .container_menu .menu_container-1 ul.level-1 li.level-1 .menu_container-2 ul.level-2 li.level-2 .menu_container-3 ul.level-3 li.level-3:hover {
-  background-color: #614B65;
+  background-color: #614b65;
 }
 
 main .container_benefits {
