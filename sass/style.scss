@@ -73,7 +73,6 @@ body {
 
                 .title {
                     .h1 {
-                        padding: 0 15px;
                         font-family: "Ovo", sans-serif;
                         text-transform: uppercase;
                         font-weight: 400;
@@ -289,21 +288,21 @@ main {
     }
 
     .container_releases {
-        .releases {
-            .container_releases-title {
-                margin: 75px 0 20px 0;
+        margin-bottom: 150px;
+        .container_releases-title {
+            margin: 75px 0 20px 0;
 
-                .p_title-text {
-                    text-align: center;
-                    font-size: calculator-rem(24);
-                    color: $text-color-dark-gray;
-                    font-weight: 400;
-                }
+            .p_title-text {
+                text-align: center;
+                font-size: calculator-rem(24);
+                color: $text-color-dark-gray;
+                font-weight: 400;
             }
         }
     }
 
     .container_category-banner {
+        margin-bottom: 145px;
         .content-category-banner {
             @include flex-center;
             justify-content: space-between;
@@ -316,19 +315,19 @@ main {
 
                 .text-title {
                     margin-bottom: 10px;
-                    font-size: 18px;
+                    font-size: calculator-rem(18);
                     font-weight: 400;
                     color: $text-color-medium-purple;
                 }
                 .text-title-big {
                     margin-bottom: 15px;
-                    font-size: 42px;
+                    font-size: calculator-rem(42);
                     font-weight: 400;
                     color: $text-color-light-purple;
                 }
-                .text-paragraph{
+                .text-paragraph {
                     margin-bottom: 50px;
-                    font-size: 20px;
+                    font-size: calculator-rem(20);
                     font-weight: 400;
                     color: $text-color-medium-purple;
                 }
@@ -341,7 +340,7 @@ main {
                     height: 38px;
 
                     color: $text-color-light-purple;
-                    font-size: 14px;
+                    font-size: calculator-rem(14);
                     font-weight: 400;
                     color: $text-color-light-purple;
                 }
@@ -349,7 +348,75 @@ main {
         }
     }
 
-    
+    .container_shelf-best-price {
+        margin-bottom: 140px;
+        .container-center {
+            .container_best-price-tittle {
+                .p_text-title {
+                    margin-bottom: 60px;
+                    text-align: center;
+                    font-size: calculator-rem(24);
+                    font-weight: 300;
+                    color: $text-color-dark-gray;
+                }
+            }
+        }
+    }
+
+    .container_shelf-highlights {
+        .container-center {
+            .highlights-tittle {
+                .p_title {
+                    margin-bottom: 7px;
+                    font-size: calculator-rem(26);
+                    font-weight: 700;
+                    color: $text-color-dark-green;
+                }
+
+                .p_text-secundary {
+                    margin-bottom: 24px;
+                    font-size: calculator-rem(18);
+                    font-weight: 400;
+                    color: $text-color-dark-green;
+                }
+            }
+
+            .highlights-wrapper {
+                display: flex;
+                .wrapper-image {
+                    position: relative;
+                    @include flex-center;
+                    .image {
+                        .img {
+                            max-width: 518px;
+                            height: auto;
+                        }
+                    }
+
+                    .image-title {
+                        position: absolute;
+                        bottom: 60px;
+                        max-width: 314px;
+                        
+                        .p_title {
+                            text-align: center;
+                            font-family: 'Ovo';
+                            font-size: calculator-rem(50);
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                        .p_text {             
+                            text-align: center;  
+                            font-family: 'Ovo';  
+                            font-size: calculator-rem(16);
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // ul.level-1 {

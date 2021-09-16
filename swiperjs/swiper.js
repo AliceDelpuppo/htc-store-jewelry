@@ -29,7 +29,7 @@ var swiper = new Swiper(".mySwiper-varieties-gemstones", {
 
 var swiper = new Swiper(".mySwiper-content_releases", {
     slidesPerView: 4,
-    // spaceBetween: 13,
+    spaceBetween: 18,
     // freeMode: true,
     navigation: {
         nextEl: ".swiper-button-next",
@@ -78,3 +78,20 @@ var swiper = new Swiper(".mySwiper-best-price", {
     keyboard: true,
 });
 
+// ----------------------------
+
+var swiper = new Swiper(".mySwiper-highlights", {
+    slidesPerView: 2,
+    spaceBetween: 17,
+    // freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+});

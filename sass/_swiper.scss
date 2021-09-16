@@ -19,6 +19,7 @@
 // --------------------------
 
 .mySwiper-varieties-gemstones {
+    width: $medium-width + 42px;
     .swiper-slide {
         text-align: center;
         height: 250px;
@@ -43,123 +44,18 @@
     .swiper-pagination {
         top: 220px;
     }
-
-    width: calc(100% - 400px);
 }
 
 //  ----------------------------------
 
 .container_releases {
-    margin-bottom: 150px;
-    .swiper-slide {
-        padding: 9px;
+    .content_releases {
+        max-width: $medium-width;
     }
 
-    .releases.container-center {
-        .container_wrapper {
-            position: relative;
-            max-width: 1014px + 18px;
-            display: flex;
-            align-items: center;
-            .mySwiper-content_releases {
-                position: static;
-
-                .swiper-wrapper {
-                    .swiper-slide {
-                        .releases-item-image {
-                            display: flex;
-                            flex-direction: column;
-
-                            .image {
-                                .img {
-                                    width: 100%;
-                                    display: flex;
-                                    height: auto;
-                                }
-                            }
-
-                            .image-selo {
-                                width: 100%;
-                                margin-bottom: 20px;
-                                height: 28px;
-                                display: flex;
-
-                                .image-selo-news {
-                                    @include flex-center;
-                                    flex-grow: 1;
-
-                                    background-color: $bg-b-light-purple;
-                                    color: #fff;
-                                    font-size: calculator-rem(12);
-                                    font-weight: 800;
-                                }
-
-                                .image-selo-free-shipping {
-                                    @include flex-center;
-                                    flex-grow: 1;
-
-                                    background-color: $bg-b-dark-purple;
-                                    color: #fff;
-                                    font-size: calculator-rem(12);
-                                    font-weight: 800;
-                                }
-                            }
-                        }
-
-                        .name-item {
-                            width: 100%;
-                            height: 100px;
-                            text-align: center;
-                        }
-
-                        .value-item {
-                            .value {
-                                text-align: center;
-                                font-size: calculator-rem(24);
-                                font-weight: 700;
-                                color: $text-color-light-purple;
-                            }
-
-                            .p_text-secundary-name {
-                                margin-bottom: 24px;
-                            }
-                        }
-
-                        .p_text-primary-name {
-                            font-size: calculator-rem(18);
-                            font-weight: 400;
-                            color: $text-color-medium-purple;
-                        }
-
-                        .p_text-secundary-name {
-                            text-align: center;
-                            font-size: calculator-rem(14);
-                            font-weight: 400;
-                            color: $text-color-medium-purple;
-                        }
-
-                        .button-buy {
-                            @include flex-center;
-                            background-color: $bg-b-green;
-                            width: 100%;
-                            height: 48px;
-                            border-radius: 50px;
-                            cursor: pointer;
-
-                            color: #fff;
-                            font-size: calculator-rem(18px);
-                            font-weight: 700;
-
-                            &:hover {
-                                background-color: rgba($color: $bg-b-green, $alpha: 0.8);
-                                letter-spacing: 0.5px;
-                            }
-                            .button {
-                            }
-                        }
-                    }
-                }
-
+    .container-center {
+        .content_releases {
+            .swiper {
                 .swiper-button-next {
                     right: -100px;
                 }
@@ -175,6 +71,8 @@
         }
     }
 }
+
+//  ----------------------------------
 
 .container_category-banner {
     .container_swiper-category-banner {
@@ -208,24 +106,63 @@
 }
 
 //  ----------------------------------
-.shelf-best-price{
+
+.container_shelf-best-price {
+    .content_best-price {
+        max-width: $medium-width;
+    }
+
+    .swiper {
+        .swiper-button-next {
+            right: -100px;
+        }
+
+        .swiper-button-prev {
+            left: -100px;
+        }
+
+        .swiper-pagination {
+            bottom: -50px;
+        }
+    }
+}
+
+//  ----------------------------------
+
+.container_shelf-highlights {
+    .content_highlights {
+        max-width: 498px;
+    }
+
+    .swiper {
+        .swiper-button-next {
+            right: -70px;
+        }
+
+        .swiper-button-prev {
+            left: -70px;
+        }
+
+        .swiper-pagination {
+            bottom: -50px;
+        }
+    }
 
 }
 
 //  ----------------------------------
 
 .swiper-style-shelf {
-    // position: relative;
-    max-width: $medium-width + 14px;
+    position: relative;
     display: flex;
     align-items: center;
 
     .swiper {
         width: 100%;
-        // position: static;
+        position: static;
 
         .swiper-wrapper {
-            .swiper-slide {               
+            .swiper-slide {
                 .wrapper-image {
                     display: flex;
                     flex-direction: column;
