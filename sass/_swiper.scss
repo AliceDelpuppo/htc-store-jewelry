@@ -65,14 +65,13 @@
                 position: static;
 
                 .swiper-wrapper {
-
-                    .content_releases-item {
-                        .content_releases-item-image {
+                    .swiper-slide {
+                        .releases-item-image {
                             display: flex;
                             flex-direction: column;
 
                             .image {
-                                img {
+                                .img {
                                     width: 100%;
                                     display: flex;
                                     height: auto;
@@ -177,21 +176,20 @@
     }
 }
 
-.container_category-banner{
-    .container_swiper-category-banner{
+.container_category-banner {
+    .container_swiper-category-banner {
         position: relative;
         display: flex;
-        .swiper{
+        .swiper {
             position: static;
-            .swiper-wrapper{
+            .swiper-wrapper {
                 max-width: 510px;
-                .swiper-slide{
+                .swiper-slide {
                     .image {
                         display: flex;
                         width: 100%;
                         height: auto;
                     }
-
                 }
             }
             .swiper-button-next {
@@ -210,7 +208,121 @@
 }
 
 //  ----------------------------------
+.shelf-best-price{
 
+}
+
+//  ----------------------------------
+
+.swiper-style-shelf {
+    // position: relative;
+    max-width: $medium-width + 14px;
+    display: flex;
+    align-items: center;
+
+    .swiper {
+        width: 100%;
+        // position: static;
+
+        .swiper-wrapper {
+            .swiper-slide {               
+                .wrapper-image {
+                    display: flex;
+                    flex-direction: column;
+
+                    .image {
+                        width: 100%;
+                        display: flex;
+                        .img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .image-selo {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        height: 28px;
+                        display: flex;
+
+                        .image-selo-news {
+                            @include flex-center;
+                            flex-grow: 1;
+
+                            background-color: $bg-b-light-purple;
+                            color: #fff;
+                            font-size: calculator-rem(12);
+                            font-weight: 800;
+                        }
+
+                        .image-selo-free-shipping {
+                            @include flex-center;
+                            flex-grow: 1;
+
+                            background-color: $bg-b-dark-purple;
+                            color: #fff;
+                            font-size: calculator-rem(12);
+                            font-weight: 800;
+                        }
+                    }
+                }
+
+                .wrapper-name {
+                    width: 100%;
+                    height: 100px;
+                    text-align: center;
+                }
+
+                .wrapper-value {
+                    .value {
+                        text-align: center;
+                        font-size: calculator-rem(24);
+                        font-weight: 700;
+                        color: $text-color-light-purple;
+                    }
+
+                    .p_text-secundary-name {
+                        margin-bottom: 24px;
+                    }
+                }
+
+                .button-buy {
+                    @include flex-center;
+                    background-color: $bg-b-green;
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 50px;
+                    cursor: pointer;
+
+                    color: #fff;
+                    font-size: calculator-rem(18px);
+                    font-weight: 700;
+
+                    &:hover {
+                        background-color: rgba($color: $bg-b-green, $alpha: 0.8);
+                        letter-spacing: 0.5px;
+                    }
+                    .button {
+                    }
+                }
+
+                .p_text-primary-name {
+                    font-size: calculator-rem(18);
+                    font-weight: 400;
+                    color: $text-color-medium-purple;
+                }
+                .p_text-secundary-name {
+                    text-align: center;
+                    font-size: calculator-rem(14);
+                    font-weight: 400;
+                    color: $text-color-medium-purple;
+                }
+            }
+        }
+    }
+}
+
+//  ----------------------------------
 :root {
     --swiper-theme-color: #542d84;
     --swiper-navigation-size: 30px;

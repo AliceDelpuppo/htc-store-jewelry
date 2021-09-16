@@ -59,3 +59,22 @@ var swiper = new Swiper(".mySwiper-category-banner", {
     // mousewheel: true,
     keyboard: true,
 });
+
+// ----------------------------
+
+var swiper = new Swiper(".mySwiper-best-price", {
+    slidesPerView: 4,
+    spaceBetween: 18,
+    // freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+});
+
