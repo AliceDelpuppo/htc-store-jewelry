@@ -95,3 +95,4 @@ var swiper = new Swiper(".mySwiper-highlights", {
     mousewheel: true,
     keyboard: true,
 });
+
