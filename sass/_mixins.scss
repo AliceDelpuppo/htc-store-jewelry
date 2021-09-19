@@ -6,11 +6,11 @@
     align-items: center;
 }
 
-// @mixin flex-var($justify-content: center, $aling-intems: center) {
-//     display: flex;
-//     justify-content: $justify-content;
-//     align-items: $aling-intems;
-// }
+@mixin flex-var($justify-content: center, $aling-intems: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $aling-intems;
+}
 
 @function calculator-rem($font-size){
     $size: math.div($font-size, 16);
