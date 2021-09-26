@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Ametista 100% Limpa",
+        "menasure": "4,10 ct | 9,73mm x 9,63mm",
+        "url": "/",
+        "img:": "amestista.png",
+        "price": "340.00",
+        "installment": "8",
+        "stamps": [
+            {
+                "name": "novidade",
+                "color": "blue"
+            },
+            {
+                "name": "frete grátis",
+                "color": "strongPurple"
+            },
+            {
+                "name": "off",
+                "value": "15",
+                "color": "strongPurple"
+            }
+        ]
+    },
+    {
+        "name": "Esmeralda",
+        "menasure": "10,38 ct | 16,45mm x 9,40mm",
+        "url": "/",
+        "img:": "esmeralda.png",
+        "price": "1.299",
+        "installment": "6",
+        "stamps": [
+            {
+                "name": "novidade",
+                "color": "blue"
+            }
+        ]
+    },
+    {
+        "name": "Morganita",
+        "menasure": "10,38 ct | 16,45mm x 9,40mm",
+        "url": "/",
+        "img:": "morganita.png",
+        "price": "2.299",
+        "installment": "5",
+        "stamps": [
+            {
+                "name": "novidade",
+                "color": "blue"
+            },
+            {
+                "name": "off",
+                "value": "15",
+                "color": "strongPurple"
+            }
+        ]
+    },
+    {
+        "name": "Turmalina Vermelha 100% limpa",
+        "menasure": "3,83 ct | 12,19mm x 9,08mm",
+        "url": "/",
+        "img:": "turmalinaVermelha.png",
+        "price": "3.000",
+        "installment": "10",
+        "stamps": [
+            {
+                "name": "frete grátis",
+                "color": "blue"
+            },
+            {
+                "name": "off",
+                "value": "15",
+                "color": "strongPurple"
+            }
+        ]
+    },
+    {
+        "name": "Amestista Roxa",
+        "menasure": "7,89 ct | 29,169mm x 9,08mm",
+        "url": "/",
+        "img:": "ametistaRoxa.png",
+        "price": "10.000",
+        "installment": "25",
+        "stamps": [
+            {
+                "name": "novidade",
+                "color": "blue"
+            },
+            {
+                "name": "frete grátis",
+                "color": "strongPurple"
+            },
+            {
+                "name": "off",
+                "value": "10",
+                "color": "strongPurple"
+            }
+        ]
+    }
+]

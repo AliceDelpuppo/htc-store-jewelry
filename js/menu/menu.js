@@ -8,7 +8,7 @@ const menu = fetch('js/menu/menu.json').then(function(response){
 })
 
 function createMenu (menu, level = MAXLEVEL){
-    console.log(menu)
+    // console.log(menu)
     
     const _div = document.createElement('div')
     _div.classList.add(`menu_container-${MAXLEVEL - level + 1}`)
